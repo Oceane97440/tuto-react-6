@@ -5,6 +5,7 @@ import Doc from './components/Doc';
 import Tuto from './components/Tuto';
 import Community from './components/Community';
 import ErrorPage from './components/ErrorPage';
+import Profil from './components/Profil';
 import './App.css';
 
 
@@ -38,7 +39,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Doc} />
           <Route path="/tuto" component={Tuto} /> 
-          
+          <Route path="/user/:id" component={Profil} /> 
+
 
           <Route strict path="/community" component={Community} />
           <Route component={ErrorPage} />
