@@ -6,6 +6,8 @@ import Tuto from './components/Tuto';
 import Community from './components/Community';
 import ErrorPage from './components/ErrorPage';
 import Profil from './components/Profil';
+import { MyContexte } from './components/MyContexte';
+import Composant1 from './components/Composent1';
 import './App.css';
 
 
@@ -46,9 +48,14 @@ class App extends React.Component {
           <Route component={ErrorPage} />
         </Switch>
 
+        <MyContexte.Provider value={this.state.statutPage}>
+        <Composant1 info={this.state.statutPage}/>
 
+        </MyContexte.Provider>
 
       </BrowserRouter>
+
+     
     );
   }
 }
